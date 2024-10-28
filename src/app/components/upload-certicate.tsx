@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 "use client";
 
@@ -30,7 +31,7 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { addCertificate, categories, Certificate, certificateSchema, } from "@/lib/certificates";
+import { addCertificate, categories, certificateSchema, } from "@/lib/certificates";
 import { Calendar } from "@/components/ui/calendar";
 import { format } from "date-fns";
 import { CalendarIcon, Upload } from "lucide-react";
@@ -52,7 +53,7 @@ export function UploadCertificate({ onSuccess }: { onSuccess: () => void }) {
     },
   });
 
-  const onSubmit = (data:any) => {
+  const onSubmit = (data:any):void => {
     addCertificate(data);
     toast({
       title: "Certificate uploaded",
