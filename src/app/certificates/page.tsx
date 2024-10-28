@@ -1,14 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { CertificateGrid } from "./components/certificate-grid";
+import { CertificateGrid } from "../components/certificate-grid";
 
-export default function Home() {
+export default function CertificatesPage() {
   return (
-    <main className="container mx-auto py-6 px-4">
+    <div className="container mx-auto py-6 px-4">
       <div className="flex justify-between items-center mb-8">
         <div>
-          <h1 className="text-3xl font-bold tracking-tight">My Certificates</h1>
-          <p className="text-muted-foreground">Manage and organize your digital certificates securely.</p>
+          <h1 className="text-3xl font-bold tracking-tight">All Certificates</h1>
+          <p className="text-muted-foreground">View and manage all your certificates in one place.</p>
         </div>
         <Button>Upload Certificate</Button>
       </div>
@@ -18,6 +18,6 @@ export default function Home() {
           <CertificateGrid />
         </Card>
       </div>
-    </main>
+    </div>
   );
 }
